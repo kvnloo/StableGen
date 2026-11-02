@@ -1,0 +1,6 @@
+# Camera captures and rendered experiment outputs remain local/private.
+data/
+runs/
+*.blend1
+
+manifest.json
