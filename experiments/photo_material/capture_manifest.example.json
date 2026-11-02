@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "experiment_id": "weathered-wood-001",
+  "material": "weathered-wood",
+  "source_revision": "f494e5f0a161b464ea3c8744e52c6d9dddfd9bcc",
+  "capture_protocol": {
+    "render_camera_locked": true,
+    "exposure_locked": true,
+    "white_balance_locked": true,
+    "notes": "Same mesh/UVs/material region, camera IDs, color pipeline and render settings across all candidates; external crop/registration to identical pixel grids. Calibration targets and lighting positions documented separately."
+  },
+  "candidate_metadata": {
+    "baseline": {
+      "mode": "StableGen without external reference",
+      "seed": null
+    },
+    "photo": {
+      "mode": "StableGen with opt-in Qwen external style reference",
+      "seed": null
+    },
+    "refined": {
+      "mode": "One-mask-at-a-time DreamLoop texture refinement",
+      "seed": null
+    }
+  },
+  "candidates": {
+    "baseline": "data/renders/baseline",
+    "photo": "data/renders/photo",
+    "refined": "data/renders/refined"
+  },
+  "captures": [
+    {
+      "id": "front-softbox-train",
+      "split": "conditioning",
+      "view_id": "front",
+      "light_id": "softbox",
+      "reference": "data/photos/front-softbox-train.png",
+      "mask": "data/photos/front-softbox-mask.png"
+    },
+    {
+      "id": "front-raking-holdout",
+      "split": "held_out",
+      "view_id": "front",
+      "light_id": "raking",
+      "reference": "data/photos/front-raking-holdout.png",
+      "render_file": "front-raking-holdout.png",
+      "mask": "data/photos/front-mask.png"
+    },
+    {
+      "id": "side-raking-holdout",
+      "split": "held_out",
+      "view_id": "side",
+      "light_id": "raking",
+      "reference": "data/photos/side-raking-holdout.png",
+      "render_file": "side-raking-holdout.png",
+      "mask": "data/photos/side-mask.png"
+    },
+    {
+      "id": "side-fill-holdout",
+      "split": "held_out",
+      "view_id": "side",
+      "light_id": "fill",
+      "reference": "data/photos/side-fill-holdout.png",
+      "render_file": "side-fill-holdout.png",
+      "mask": "data/photos/side-mask.png"
+    }
+  ]
+}
